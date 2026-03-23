@@ -48,6 +48,7 @@ highlighting inter-subject variability in EEG signals.
 - No cross-validation used (optional improvement)
 
 ### Future Scope
-- Features are simple (no spatial filtering like CSP)
-- Performance varies across subjects
-- No cross-validation used (optional improvement)
+- Implement Common Spatial Patterns (CSP)
+- Use filter bank approaches (FBCSP)
+- Explore cross-subject generalization
+- Try SVM or deep learning models

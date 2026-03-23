@@ -6,9 +6,11 @@ The goal is to classify left-hand vs right-hand motor imagery using physiologica
 ## Dataset: BCI Competition IV Dataset 2a 
 #### Download the dataset from:
 https://www.kaggle.com/datasets/thngdngvn/bci-competition-iv-data-sets-2a
+
 Use the following files:
 - A01T.mat
 - A02T.mat
+  
 Place them in the same directory as the MATLAB scripts.
 
 #### Within each .mat file

@@ -37,10 +37,10 @@ Some subjects show near-chance performance (~50%),
 highlighting inter-subject variability in EEG signals.
 
 ### Key Insights
-- Motor imagery reduces mu rhythm power (ERD)
-- Spatial differences between hemispheres are informative
-- EEG signals are noisy and subject-dependent
-- Simple features can achieve above-chance classification
+- Implement Common Spatial Patterns (CSP)
+- Use filter bank approaches (FBCSP)
+- Explore cross-subject generalization
+- Try SVM or deep learning models
 
 ### Limitations
 - Features are simple (no spatial filtering like CSP)

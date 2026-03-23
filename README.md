@@ -3,7 +3,15 @@
 This project implements a basic EEG motor imagery classification pipeline using the BCI Competition IV-2a dataset.
 The goal is to classify left-hand vs right-hand motor imagery using physiologically meaningful features derived from the mu rhythm (8–13 Hz).
 
-Dataset: BCI Competition IV Dataset 2a 
+## Dataset: BCI Competition IV Dataset 2a 
+#### Download the dataset from:
+https://www.kaggle.com/datasets/thngdngvn/bci-competition-iv-data-sets-2a
+Use the following files:
+- A01T.mat
+- A02T.mat
+Place them in the same directory as the MATLAB scripts.
+
+#### Within each .mat file
 - 22 EEG channels (+3 EOG channels)
 - 4 classes (left hand, right hand, feet, tongue)
 - Only left vs right imagery used in this project

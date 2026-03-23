@@ -16,6 +16,9 @@ Dataset: BCI Competition IV Dataset 2a
 5. Bandpass filter in mu band (9–13 Hz)
 6. Construct 3D dataset (trials × samples × channels)
 
+As the dataset is reenvisioned as a tensor of trials, the 'trials' input data is limited to one single subject only. This is done to avoid inter-subject variability, which significantly affects model performance.
+In later iterations, the 'trials' dataset can be enlarged to include the trials from other 8 subjects as well.
+
 ## Feature Extraction (ref. feats.m)
 Three features are extracted per trial:
 1. log(var(C3)) → left motor cortex activity

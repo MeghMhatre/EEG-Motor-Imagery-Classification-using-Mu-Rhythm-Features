@@ -42,12 +42,11 @@ Classifier: Linear Discriminant Analysis (LDA)
 - Data split: 70% training / 30% testing
 - Evaluation: classification accuracy
 
-Single Subject:
-Accuracy ≈ 60–70%
-Multi-Subject:
-Accuracy ≈ 58%
-Some subjects show near-chance performance (~50%),
-highlighting inter-subject variability in EEG signals.
+Single Subject Accuracy:
+A01T: 58% ± 6%
+A02T: 51% ± 6%
+A03T: 86% ± 4%
+With multi-subject trials as inputs, the model shows near-chance performance (~50%), highlighting inter-subject variability in EEG signals.
 
 ### Key Insights
 - Implement Common Spatial Patterns (CSP)

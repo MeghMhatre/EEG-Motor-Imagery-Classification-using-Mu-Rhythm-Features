@@ -28,7 +28,7 @@ Place them in the same directory as the MATLAB scripts.
 6. Construct 3D dataset (trials × samples × channels)
 
 As the dataset is reenvisioned as a tensor of trials, the 'trials' input data is limited to one single subject only. This is done to avoid inter-subject variability, which significantly affects model performance.
-In later iterations, the 'trials' dataset can be enlarged to include the trials from other 8 subjects as well.
+In later iterations, the 'trials' dataset can be enlarged to include the trials from the other 8 subjects as well.
 
 ## Feature Extraction (ref. feats.m)
 Three features are extracted per trial:
@@ -43,12 +43,14 @@ Classifier: Linear Discriminant Analysis (LDA)
 - Data split: 70% training / 30% testing
 - Evaluation: classification accuracy
 
-Single Subject Accuracy:
+Single-subject classification performance (mean ± std over 100 runs):
+
 - A01T: 58% ± 6%
 - A02T: 51% ± 6%
 - A03T: 86% ± 4%
 
-With multi-subject trials as inputs, the model shows near-chance performance (~50%), highlighting inter-subject variability in EEG signals.
+Significant variation is observed across subjects.
+While A03T exhibits strong separability, A02T remains near chance level, showcasing the differing motor imagery patterns between individuals. Due to this inter-subject variability, multi-subject classification further reduces performance to near chance (~50%), as the used simple features do not generalize across subjects.
 
 ### Key Insights
 - Implement Common Spatial Patterns (CSP)

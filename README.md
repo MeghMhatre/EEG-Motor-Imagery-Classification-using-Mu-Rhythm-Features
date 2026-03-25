@@ -30,6 +30,19 @@ Place them in the same directory as the MATLAB scripts.
 As the dataset is reenvisioned as a tensor of trials, the 'trials' input data is limited to one single subject only. This is done to avoid inter-subject variability, which significantly affects model performance.
 In later iterations, the 'trials' dataset can be enlarged to include the trials from the other 8 subjects as well.
 
+## Physiological Motivation
+Power Spectral Density (PSD) analysis reveals suppression of the mu rhythm (9–13 Hz)
+during motor imagery in the opposite cortex.
+
+At electrode C3 (left motor cortex):
+- Right-hand imagery shows reduced mu power
+
+At electrode C4 (right motor cortex):
+- Left-hand imagery shows reduced mu power
+
+This phenomenon, known as Event-Related Desynchronization (ERD), occurs when activity suppresses the resting mu rhythm.
+This motivates the use of variance and bandpower-based features.
+
 ## Feature Extraction (ref. feats.m)
 Three features are extracted per trial:
 1. log(var(C3)) → left motor cortex activity

@@ -2,7 +2,8 @@ clc, clear all,close all
 
 A01 = load("A01T.mat");
 A02 = load("A02T.mat");
-Data = [A01];
+A03 = load("A03T.mat");
+Data = [A01]; % Single subject trial input
 Fs = 250;
 run_win =[];
 run_lab = [];

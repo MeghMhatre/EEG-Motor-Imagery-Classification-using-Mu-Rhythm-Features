@@ -7,10 +7,10 @@ The goal is to classify left-hand vs right-hand motor imagery using physiologica
 #### Download the dataset from:
 https://www.kaggle.com/datasets/thngdngvn/bci-competition-iv-data-sets-2a
 
-Use the following files:
+Files used in this project:
 - A01T.mat
 - A02T.mat
-  
+- A03T.mat 
 Place them in the same directory as the MATLAB scripts.
 
 #### Within each .mat file
@@ -43,9 +43,9 @@ Classifier: Linear Discriminant Analysis (LDA)
 - Evaluation: classification accuracy
 
 Single Subject Accuracy:
-A01T: 58% ± 6%
-A02T: 51% ± 6%
-A03T: 86% ± 4%
+- A01T: 58% ± 6%
+- A02T: 51% ± 6%
+- A03T: 86% ± 4%
 With multi-subject trials as inputs, the model shows near-chance performance (~50%), highlighting inter-subject variability in EEG signals.
 
 ### Key Insights

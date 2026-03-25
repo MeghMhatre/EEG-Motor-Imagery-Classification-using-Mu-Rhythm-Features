@@ -1,7 +1,7 @@
 # EEG-Motor-Imagery-Classification-using-Mu-Rhythm-Features
 
 This project implements a basic EEG motor imagery classification pipeline using the BCI Competition IV-2a dataset.
-The goal is to classify left-hand vs right-hand motor imagery using physiologically meaningful features derived from the mu rhythm (8–13 Hz).
+The goal is to classify left-hand vs right-hand motor imagery using physiologically motivated features derived from the mu rhythm (8–13 Hz).
 
 ## Dataset: BCI Competition IV Dataset 2a 
 #### Download the dataset from:
@@ -30,7 +30,7 @@ Place them in the same directory as the MATLAB scripts.
 As the dataset is reenvisioned as a tensor of trials, the 'trials' input data is limited to one single subject only. This is done to avoid inter-subject variability, which significantly affects model performance.
 In later iterations, the 'trials' dataset can be enlarged to include the trials from the other 8 subjects as well.
 
-## Physiological Motivation
+## Physiological Motivation (ref. PSD_Analysis.m)
 Power Spectral Density (PSD) analysis reveals suppression of the mu rhythm (9–13 Hz)
 during motor imagery in the opposite cortex.
 
@@ -39,9 +39,9 @@ At electrode C3 (left motor cortex):
 
 At electrode C4 (right motor cortex):
 - Left-hand imagery shows reduced mu power
-
+![PSD Plot](PSDwithERDdiff.png)
 This phenomenon, known as Event-Related Desynchronization (ERD), occurs when activity suppresses the resting mu rhythm.
-This motivates the use of variance and bandpower-based features.
+This asymmetrical suppression between the hemispheres motivates the use of variance and bandpower-based features for discriminating left vs right motor imagery.
 
 ## Feature Extraction (ref. feats.m)
 Three features are extracted per trial:
@@ -56,7 +56,7 @@ Classifier: Linear Discriminant Analysis (LDA)
 - Data split: 70% training / 30% testing
 - Evaluation: classification accuracy
 
-Single-subject classification performance (mean ± std over 100 runs):
+Single-subject classification performance (mean ± std averaged over 100 random test-train split runs):
 
 - A01T: 58% ± 6%
 - A02T: 51% ± 6%

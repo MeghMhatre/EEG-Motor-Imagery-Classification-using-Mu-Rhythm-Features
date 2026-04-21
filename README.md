@@ -19,7 +19,7 @@ Place them in the same directory as the MATLAB scripts.
 - 4 classes (left hand, right hand, feet, tongue)
 - Only left vs right imagery used in this project
 
-## Data Preparation (ref. Data_org.m)
+## Data Preparation (ref. data_preparation.m)
 1. Load subject data (ex. A01T.mat)
 2. Extract trials using provided indices
 3. Remove artifact-contaminated trials
@@ -43,7 +43,7 @@ At electrode C4 (right motor cortex):
 This phenomenon, known as Event-Related Desynchronization (ERD), occurs when activity suppresses the resting mu rhythm.
 This asymmetrical suppression between the hemispheres motivates the use of variance and bandpower-based features for discriminating left vs right motor imagery.
 
-## Feature Extraction (ref. feats.m)
+## Feature Extraction (ref. feature_extraction.m)
 Three features are extracted per trial:
 1. log(var(C3)) → left motor cortex activity
 2. log(var(C4)) → right motor cortex activity
